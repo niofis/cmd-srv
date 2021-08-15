@@ -1,0 +1,12 @@
+#/etc/systemd/system/cmd-srv.service
+[Unit]
+Description=cmd-srv
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/home/pi/code/cmd-srv/target/release/cmd-srv
+
+[Install]
+WantedBy=multi-user.target
